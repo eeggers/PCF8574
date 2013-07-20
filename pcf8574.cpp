@@ -32,7 +32,7 @@ void PCF8574::setBit(int pin, int value){
   setByte(value?(state | mask):(state & (~mask)));
 }
 
-char PCF8574::getByte(){
+unsigned char PCF8574::getByte(){
   union i2c_smbus_data data_union;
   struct i2c_smbus_ioctl_data data;
   data.read_write = I2C_SMBUS_READ;
