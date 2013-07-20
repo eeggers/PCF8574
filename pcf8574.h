@@ -16,7 +16,6 @@ class PCF8574{
   unsigned char state;
   char I2CBusLocation[256];
  public:
-  PCF8574();
   PCF8574(char *, int);//i2cbuslocation, address
   ~PCF8574();
   void setByte(char);

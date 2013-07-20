@@ -1,12 +1,5 @@
 #include "pcf8574.h"
 
-
-PCF8574::PCF8574(){
-  strcpy(this->I2CBusLocation, "/dev/null");
-  this->address = 0;
-  this->state = 0xff;
-}
-
 PCF8574::PCF8574(char * I2CBusLocation, int address){
   strcpy(this->I2CBusLocation, I2CBusLocation);
   this->address = address;
