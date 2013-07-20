@@ -20,7 +20,7 @@ class PCF8574{
   ~PCF8574();
   void setByte(unsigned char);
   void setBit(int,int);//pin,value
-  char getByte();
+  unsigned char getByte();
   int getBit(int);//pin
 
   int getAddress(){return address;}
