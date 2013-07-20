@@ -13,12 +13,12 @@
 class PCF8574{
  private:
   int address;
-  char state;
+  unsigned char state;
   char I2CBusLocation[256];
  public:
   PCF8574(char *, int);//i2cbuslocation, address
   ~PCF8574();
-  void setByte(char);
+  void setByte(unsigned char);
   void setBit(int,int);//pin,value
   char getByte();
   int getBit(int);//pin

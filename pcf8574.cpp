@@ -7,7 +7,7 @@ PCF8574::PCF8574(char * I2CBusLocation, int address){
   setByte(state);
 }
 
-void PCF8574::setByte(char value){
+void PCF8574::setByte(unsigned char value){
   struct i2c_smbus_ioctl_data data;
   data.read_write = I2C_SMBUS_WRITE;
   data.size       = I2C_SMBUS_BYTE;
